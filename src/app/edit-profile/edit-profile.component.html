@@ -1,0 +1,122 @@
+<div  class=" ">
+    <div class="">
+      <div 
+      class=""
+        >
+    
+    
+      <mat-card class="my-card ">
+        
+      <form [formGroup]="studentProfileForm" (ngSubmit)="updateStudentProfile()" >
+        <mat-card-title class="center">Edit Profile</mat-card-title>
+       
+        <div class="text-center inputs">
+           <!-- FIRSTNAME -->
+          <div>
+        <mat-form-field appearance="fill" [floatLabel]="getFloatLabelValue()">
+          <mat-label class="label">First Name</mat-label>
+          <input matInput placeholder="Simple placeholder" formControlName="firstName" class="form-control inputs" id="firstName">
+        </mat-form-field>
+      </div>  
+       <!-- LASTTNAME -->
+      <div class="my-card-content">
+        <mat-form-field appearance="fill" [floatLabel]="getFloatLabelValue()">
+          <mat-label>Last Name</mat-label>
+          <input matInput class="form-control" placeholder="Simple placeholder" formControlName="lastName">
+        </mat-form-field>
+    </div>  
+    
+    <!-- OWNERSHIP -->
+    <div class="my-card-content">
+    <mat-form-field appearance="fill"
+            
+            [floatLabel]="getFloatLabelValue()">
+          <mat-select class="form-control" required formControlName="privatePublic"
+          >
+            <mat-option>-- Select One --</mat-option>
+            <mat-option value="PrivateNP">Private (Non-Porfit)</mat-option>
+            <mat-option value="PrivateFP">Private (For-Porfit)</mat-option>
+            <mat-option value="Public">Public</mat-option>
+          
+          </mat-select>
+          <mat-label><mat-icon>account_balance</mat-icon> <b> School Ownership</b></mat-label>
+        </mat-form-field>
+    </div>
+    <!-- REGION -->
+    <div class="my-card-content">
+        <mat-form-field appearance="fill"
+            
+            [floatLabel]="getFloatLabelValue()">
+          <mat-select required class="form-control" formControlName="regionUsa">
+            <mat-option>-- Select One --</mat-option>
+            <mat-option value="NewEngland">New England (CT, ME, MA, NH, RI, VT)</mat-option>
+            <mat-option value="MidEast">Mid East (DE, DC, MD, NJ, NY, PA)</mat-option>
+            <mat-option value="GreatLakes">Great Lakes (IL, IN, MI, OH, WI)</mat-option>
+            <mat-option value="Plains">Plains (IA, KS, MN, MO, NE, ND, SD)</mat-option>
+            <mat-option value="Southeast">Southeast (AL, AR, FL, GA, KY, LA, MS, NC, SC, TN, VA, WV)</mat-option>
+            <mat-option value="Southwest">Southwest (AZ, NM, OK, TX)</mat-option>
+    
+            <mat-option value="RockyMountains">Rocky Mountains (CO, ID, MT, UT, WY)</mat-option>
+            <mat-option value="FarWest">Far West (AK, CA, HI, NV, OR, WA)</mat-option>
+            <mat-option value="Outlying Areas">Outlying Areas (AS, FM, GU, MH, MP, PR, PW, VI)</mat-option>
+          
+          </mat-select>
+          <mat-label><mat-icon>location_city</mat-icon> <b> Region Preferred</b></mat-label>
+        </mat-form-field>
+    
+    </div>
+    <!-- LOCATION SIZE -->
+    <div class="my-card-content">
+    <mat-form-field appearance="fill"
+            
+    [floatLabel]="getFloatLabelValue()">
+    <mat-select required class="form-control" formControlName="locationSize">
+    <mat-option>-- Select One --</mat-option>
+    <mat-option value="City">City</mat-option>
+    <mat-option value="Suburb">Suburb</mat-option>
+    <mat-option value="Town">Town</mat-option>
+    <mat-option value="Rural">Rural</mat-option>
+    
+    </mat-select>
+    <mat-label><mat-icon>nature_people</mat-icon> <b> Location Size</b></mat-label>
+    </mat-form-field>
+    </div>
+    <!-- SAT -->
+    <div class="my-card-content">
+    <mat-form-field appearance="fill" [floatLabel]="getFloatLabelValue()">
+      <mat-label>Your SAT Score</mat-label>
+      <input matInput class="form-control" placeholder="Simple placeholder" formControlName="satScore">
+    </mat-form-field>
+    
+    </div>
+     <!-- COST -->
+    <div class="my-card-content">
+     <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Max Cost Of Attendance</mat-label>
+      <input matInput type="number" class="example-right-align form-control" placeholder="0" formControlName="maxCostOfAttendance">
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+    
+    </div>
+    <!-- <div *ngIf="!this.studentProfileForm.valid && this.studentProfileForm.touched" class="text-danger">
+      All fields are required
+    </div> -->
+    <div class="col my-card-content" id="indicative">
+      <button  id="indicative-present"
+      class="btn blue-button shadow-none  flex-fill mx-1 nav-button" 
+      routerLink=""
+      data-test-id="submit" type="button" (click)="updateStudentProfile()" [disabled]="!this.studentProfileForm.valid"
+      >Save Edits</button>
+    </div>
+    
+    
+        </div>
+       
+      </form>
+    </mat-card>
+    </div>
+    </div>
+    </div>
+    
+    

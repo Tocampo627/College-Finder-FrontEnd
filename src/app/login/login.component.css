@@ -1,0 +1,28 @@
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+body {
+  padding: 100px 0;
+  background-color: #efefef;
+}
+a,
+a:hover {
+  color: #333;
+}
+
+
+.blue-button {
+  background-color: #00aeff;
+  padding: 5px 60px;
+  font-size: 20px;
+  border-radius: 12px;
+}
+.blue-button:hover {
+  background-color: #89cdf4;
+  color: rgb(14, 14, 14);
+}
+.login-title{
+
+  margin: 10px;
+}

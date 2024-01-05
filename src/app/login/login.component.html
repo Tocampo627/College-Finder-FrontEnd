@@ -1,0 +1,97 @@
+<section class="text-center  center-center">
+  <!-- Background image -->
+  <div
+    class="p-5 bg-image"
+    style="
+      background-image: url(https://lh3.googleusercontent.com/MZAo6bptfcBbzRyuJ_NYhNDE9FY_RDAf_Gh3QYxySpJYTTixzQy0hE0LrhTiXgScdXNyGKZ1O5yhTyF37i7qp04-yjr7SStnsfuh1vK5Y1l0asc9oh2MFvnoIDP3AWX3BvgOIFn-CQ=w2400);
+      height: 300px;
+    "
+  ></div>
+  <!-- Background image -->
+
+  <div
+    class="card mx-4 mx-md-5 shadow-5-strong shadow"
+    style="
+      margin-top: -100px;
+      background: hsla(0, 0%, 100%, 0.8);
+      backdrop-filter: blur(30px);
+    "
+  >
+    <div class="card-body py-5 px-md-6">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <!-- <h2 class="fw-bold mb-5">Login</h2> -->
+          <!-- [formGroup]="userProfileForm" (ngSubmit)="onSubmit()" -->
+          <form  (ngSubmit)="signIn()" [formGroup]="loginForm">
+            <mat-card-title class="login-title">Login</mat-card-title>
+            <div class="text-center inputs">
+              <div class="mb-4" >
+                <mat-form-field appearance="outline">
+                  <mat-label for="email">Enter your email</mat-label>
+                  <input
+                    matInput
+                    type="email"
+                    id="form2Example1"
+                    class="form-control"
+                    placeholder="pat@example.com"
+                    formControlName="username"
+                    autofocus
+                    reaquired
+                  />
+    
+                  <mat-icon matSuffix>alternate_email</mat-icon>
+                </mat-form-field>
+              </div>
+    
+              <div class="mb-4">
+                <mat-form-field appearance="outline">
+                  <mat-label>Enter your password</mat-label>
+                  <input
+                    matInput
+                    [type]="hide ? 'password' : 'text'"
+                   
+                    formControlName="password"
+                    [(ngModel)]="user.password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide"
+                  >
+                    <mat-icon>{{
+                      hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                  </button>
+                 
+                </mat-form-field>
+                <p *ngIf="loginError"> Invalid Password, Please Try Again</p>
+              </div>
+    
+              <section>
+                <div class="">
+                  <button
+                    type="submit"
+                    
+                    [disabled]="loading"
+                    class="btn mb-4 btn-outline-primary blue-button"
+                    mat-raised-button
+                  >
+                    <span role="status" aria-hidden="true" *ngIf="loading"></span>
+                   Login
+                  </button>
+                </div>
+              </section>
+            </div>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 

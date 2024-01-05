@@ -1,0 +1,106 @@
+<section>
+  <div class="content">
+    <h2 style="text-align: center">My Matches</h2>
+    <div fxLayout="row wrap  " fxLayoutGap="16px grid" class="elem-style">
+      <div
+        fxFlex="30%"
+        fxFlex.xs="100%"
+        fx.Flex.sm="80%"
+        *ngFor="let college of schoolMatch1"
+      >
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header>
+            <mat-card-title
+              ><h2>{{ college.name }}</h2></mat-card-title
+            >
+            <mat-card-subtitle
+              ><h3>{{ college.city }}</h3></mat-card-subtitle
+            >
+          </mat-card-header>
+
+          <img
+            class="card-img-top img-fluid"
+            src="https://lh3.googleusercontent.com/yNzlgy3Ri3hoCTDBAcCnJcaXDlx6GSuZn9oucU7UR2pGjRP1GVZIS-qFkyHLbvScFhlystJ5ecxXVd-wBjuOdWvevMWy2gWs-y8ZHXB-4ymeUIdRR7zKsWsBykvJ_ESWU4SDfg2V9A=w600-h315-p-k"
+            alt="Photo of campus"
+          />
+
+          <mat-card-content>
+            <p class="first-line"><b>School Name: </b>{{ college.name }}</p>
+            <p><b>City: </b>{{ college.city }}</p>
+            <p><b>State: </b>{{ college.state }}</p>
+            <p><b>Admission Rate: </b>{{ college.admissionRate | percent }}</p>
+            <p *ngIf="college.aveSATScore == null">
+              <b>Admission SAT Score: </b>Not Available
+            </p>
+            <p *ngIf="college.aveSATScore != null">
+              <b>Admission SAT Score: </b>{{ college.aveSATScore }}
+            </p>
+            <p>
+              <b>Cost of Attendance: </b>{{ college.annualCost | currency }}
+            </p>
+
+            <p *ngIf="college.isPublic == 1"><b>School Ownership: </b>Public</p>
+            <p *ngIf="college.isPublic == 2">
+              <b>School Ownership: </b>Private Non-Profit
+            </p>
+            <p *ngIf="college.isPublic == 3">
+              <b>School Ownership: </b>Private For-Profit
+            </p>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <button
+              mat-button
+              (click)="
+                saveSchoolToList(
+                  college.schoolId,
+                  college.name,
+                  college.city,
+                  college.state,
+                  college.annualCost,
+                  college.aveSATScore
+                )
+              "
+            >
+              <i><mat-icon>favorite</mat-icon></i>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+<!-- <ng-container class="card-container"> -->
+<!-- *ngfor="let school of schoolMatch1; let i = index" -->
+
+<!-- <div>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>School Name</mat-card-title>
+        <mat-card-subtitle>School Location</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="../assets/images/college-list-empty.png"
+        alt=""
+      />
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz
+          breeds of dog from Japan. A small, agile dog that copes very well with
+          mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>
+          <i><mat-icon>favorite</mat-icon></i>
+        </button>
+        <button mat-button>
+          <i><mat-icon>thumb_down</mat-icon></i>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div> -->
+<!-- </ng-container> -->

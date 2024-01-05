@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://lh3.googleusercontent.com/Ey3-OFEUmgR7klB9ItwBik3qQFv0F6BRqHoyUBD0Yzu7vKIffelbhqxD_aBbld2t8zdB84Bj6i2YsoXRNYxWX1JQSeqZYMdkEttcM0dah6Uwmh6E2CSFOwEO2kYKOYO42slgdCNM-g=w2400"
+        width="80"
+        height="80"
+        class="d-inline-block align-top rounded-circle"
+        alt=""
+        routerLink="/"
+      />
+    </a>
+  </div>
+  <div class="navbar-header">
+    <h1 class="text-black">College Finder</h1>
+  </div>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-nav mx-auto">
+      <a class="p-2 text-muted" routerLink="/">Home</a>
+      <a class="p-2 text-muted" routerLink="/colleges"
+        >University Data Search</a
+      >
+
+      <a class="p-2 text-muted" routerLink="/majors">Majors</a>
+
+      <a
+        *ngIf="isAuthenticated"
+        class="p-2 text-muted"
+        routerLink="/my-account"
+        data-test-id="myAccount"
+        >My Account</a
+      >
+
+      <a
+        *ngIf="!isAuthenticated"
+        class="btn btn-md btn-outline-dark nav-button"
+        routerLink="/login"
+        id="login"
+        >Login</a
+      >
+
+      <a
+        *ngIf="isAuthenticated"
+        class="btn btn-md btn-outline-dark nav-button"
+        data-test-id="logout"
+        (click)="signOut()"
+        >Logout</a
+      >
+
+      <a
+        class="btn btn-md btn-outline-primary nav-button"
+        routerLink="/signup"
+        id="signup"
+        >Sign Up</a
+      >
+    </div>
+  </div>
+</nav>

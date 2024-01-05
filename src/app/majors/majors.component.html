@@ -1,0 +1,731 @@
+<!-- //*ngFor="majors; of: [1, 2, 3, 4, 5, 6]" -->
+<div class="career-title">
+  <h1>Explore Careers and Majors</h1>
+</div>
+<ng-container>
+  <div class="card-table card">
+    <mat-accordion class="container">
+      <!-- AGRICULTURE -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> <h3>Agricutlure</h3> </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          This career is focused on the production, processing, marketing,
+          distribution, financing, and development of agricultural commodities
+          and resources including food, fiber, wood products, natural resources,
+          horticulture, and other plant and animal products or resources.
+        </p>
+
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of agricultureColleges">{{ colleges }}</p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Architecture -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> <h3>Architecture</h3> </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          The Architecture and Construction career cluster prepares learners for
+          careers in designing, planning, managing, building and maintaining the
+          built environment. People employed in these fields work on new
+          structures, restorations, additions, alterations and repairs.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of architectureColleges">{{ colleges }}</p>
+        </div>
+      </mat-expansion-panel>
+      <!-- BIOLOGY -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> <h3>Biology</h3> </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Researching, identifying, classifying and studying plants, animals and
+          ecosystems. Collecting samples, taking measurements and photographing
+          or sketching organisms. Observing organisms to learn more about their
+          diets, behavior and impact on their surroundings.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of biologicalColleges">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Bus &  Marketing -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> <h3>Business & Marketing</h3> </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Business marketing is a marketing practice of individuals or
+          organizations (including commercial businesses, governments and
+          institutions). It allows them to sell products or services to other
+          companies or organizations that resell them, use them in their
+          products or services or use them to support their works.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of busMarketingColleges">{{ colleges }}</p>
+        </div>
+      </mat-expansion-panel>
+      <!--Communications -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> <h3>Communications</h3> </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Communications Specialists handle public relations, information
+          output, and media requests. They can also plan social media campaigns
+          or advertising efforts for a business. Overall, they ensure a company
+          has excellent and effective advertising whenever a campaign is in the
+          works.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of communicationsColleges">{{ colleges }}</p>
+        </div>
+      </mat-expansion-panel>
+      <!--Communications & TECH -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Communications Technology</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Write, edit, and distribute content, including publications, press
+          releases, website content, annual reports, speeches, and other
+          marketing material that communicates the organization's activities,
+          products and/or services. Respond to media inquiries, arrange
+          interviews, and act as a spokesperson for the organization.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of communicationsAndTechColleges">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Computer Science -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Computer Science</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          On the job, computer scientists use technology to solve problems and
+          prepare for the future. They also write and program software to create
+          applications. Their primary focus, however, is to validate and develop
+          models for interaction between people and computers or software and
+          devices.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of computerScienceColleges">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Culinary -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Culinary</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Culinary professionals coordinate the work of the kitchen staff and
+          directs the preparation of meals in all areas, including planning
+          menus, ordering food supplies and overseeing kitchen operations to
+          ensure uniform quality and presentation of meals.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of culinary">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Education -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Education</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          An educator is responsible for teaching students and contributes to
+          their learning development. Duties of an educator include creating
+          learning modules and materials, developing engaging activities, and
+          facilitating learners' discussions.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of education">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Engineering -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Engineering</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          An Engineer, uses math and science to solve different technical
+          problems. Their main duties include developing new products for
+          companies or individuals to use, providing maintenance to current
+          products to enhance use and designing new machines to improve an
+          organization's efficiencies.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of engineering">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Engineering & Technology -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Engineering & Technology</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Engineering Technologists support research and development activities
+          within a field or specialization of an engineering discipline through
+          the application of known engineering principles and practices in order
+          to develop new concepts, products, equipment, or processes.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of engineeringAndTechnology">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--English-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>English</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Studying English prepares you for a diverse range of professional
+          fields, including teaching, journalism, law, publishing, medicine, and
+          the fine arts. English majors also pursue careers in tech companies
+          and other startup ventures--in Silicon Valley and beyond.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of english">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Ethnic, Cultural, and Gender Studeies-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Ethnic, Cultural, and Gender Studies</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          An individual with Ethnic, Cultural, and Gender Studies may be
+          responsible for instructing people about the cultural and development
+          of an area or ethnic group. Specializes in one or more cultures or
+          ethnicities, such as Latin America or women's studies. Conducts
+          research, teaches students, and holds seminars.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of ethicsCultureGender">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Family Consumer Science-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Family Consumer Science</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Family and Consumer Sciences encompasses the study of the
+          relationships among people and their personal environments. The
+          department focuses on the impact of the physical, biological, social
+          and economic environments on human behavior and development.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of famConsumerScience">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Health-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Health</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          A health professional, healthcare professional, or healthcare worker
+          is a provider of health care treatment and advice based on formal
+          training and experience. The field includes those who work as a nurse,
+          physician (such as family physician, internist, obstetrician,
+          psychiatrist, radiologist, surgeon etc.), physician assistant,
+          registered dietitian, veterinarian, veterinary technician,
+          optometrist, pharmacist, pharmacy technician, medical assistant,
+          physical therapist, occupational therapist, dentist, midwife,
+          psychologist, or who perform services in allied health professions.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of health">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--History-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>History</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Historians typically do the following: Gather historical data from
+          various sources, including archives, books, and artifacts. Analyze and
+          interpret historical information to determine its authenticity and
+          significance. Trace historical developments in a particular field.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of history">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Human Resources-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Human Resources</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Human resources is in charge of arranging interviews, coordinating
+          hiring efforts, and onboarding new employees. They're also in charge
+          of making sure all paperwork involved with hiring someone is filled
+          out and making sure that everything from the first day to each
+          subsequent day is navigated successfully.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of humanResources">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Humanities -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Humanities</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          A career in humanities can offer a wide range of rewarding jobs. The
+          list of career options can include jobs in mass communication,
+          international relations, academics, psychology, hospitality and
+          marketing.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of humanities">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Language Studies -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Language Studies</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          A language specialist is a professional who evaluates the use of
+          language. Also known as linguists, they study and practice speech
+          patterns and analyze how languages originated. Some language
+          specialists, such as interpreters and translators, convert and
+          transcribe conversations from one language to another.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of languageStudies">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Law -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Law</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Advise and represent clients in courts, before government agencies,
+          and in private legal matters. Communicate with their clients,
+          colleagues, judges, and others involved in the case. Conduct research
+          and analysis of legal problems. Interpret laws, rulings, and
+          regulations for individuals and businesses.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of law">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Mathematics -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Mathematics</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Mathematicians and statisticians work with formulas and data to help
+          solve problems in industry, academia, and government. Mathematicians
+          and statisticians analyze data and apply computational techniques to
+          solve problems.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of math">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Military -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Military</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Enlisted personnel typically do the following: Participate in, or
+          support, military operations, such as combat or training operations,
+          or humanitarian or disaster relief. Operate, maintain, and repair
+          equipment. Perform technical and support activities.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of military">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Multidisciplinary Studies -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Multidisciplinary Studies</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Graduates with a degree in Multidisciplinary Studies can go into many
+          fields including counseling, journalism or advertising, depending on
+          learners' selected areas of study, work experience and level of
+          educational attainment.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of multidisciplinary">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Parks Recreational Fitness -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Parks Recreational Fitness</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of parks">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Philosophy & Religion-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Philosophy & Religion</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Philosophy and religion graduates pursue careers in various sectors,
+          including non- profits, government/ legal, education and business. In
+          the non-profit field, graduates work with religious institutions and
+          affiliated agencies and other social service/ health care
+          organizations in various roles.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of philosophyandReligion">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Physical Sciences-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Physical Sciences</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Physical science includes the fields of chemistry and physics.Examples
+          of careers in physical science include pharmacist, laboratory
+          supervisor, teacher, and surveyor.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of physicalSciences">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Psychology-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Psychology</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Psychologists study cognitive, emotional, and social processes and
+          behavior by observing, interpreting, and recording how people relate
+          to one another and to their environments. They use their findings to
+          help improve processes and behaviors.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of psychology">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Public Administration & Social Services-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Public Administration & Social Services</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Public services administrators manage community organizations and
+          social services programs. They work closely with community members and
+          consistently evaluate the effectiveness and need of their programs.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of publicAdminSocialEvents">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Security & Law Enforcement-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Security & Law Enforcement</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Security officers are responsible for ensuring the safety and
+          protection of a company's employees, visitors, and associated
+          property. Security officers are tasked with patrolling a designated
+          area, responding to safety and security threats, and establishing a
+          security presence. Security officers work in office buildings, retail
+          stores, hospitals, colleges, casinos, and much more.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of securityandLawEnforcement">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Social Sciences-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Social Sciences</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Social scientists study human behavior and the mental, social and
+          biological processes that influence and result from it. To deepen
+          their understanding of these phenomena, they design and conduct
+          experiments, analyze the results and share their findings with
+          colleagues and the public.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of socialSciences">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!-- Theology Religious Vocation-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Theology Religious Vocation</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          In this career, you will lead religious meetings and ceremonies,
+          counsel congregation members and study religious texts. You may
+          perform administrative tasks and participate in community functions.
+          Most clergy members work long and unusual hours to attend to members
+          and prepare for religious services.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of theologyReligionStudies">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Transportation Management -->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Transportation Management</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Transport managers are responsible for directing, coordinating,
+          planning and overseeing tasks and operations within an organisation
+          involving transportation activities. They are required to ensure the
+          legal requirements for road haulage are met.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of transportaitonManagement">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--Visual Performing Arts-->
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Visual Performing Arts</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          A visual artist creates works of art using a variety of materials. As
+          a visual artist, your duties may be to draw images, work with paint,
+          develop murals, design in 3D, or create art with mixed media.
+        </p>
+        <div class="scroll col-md-12">
+          <p *ngFor="let colleges of visualPerformingArts">
+            {{ colleges }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+      <!--End Of Accordion -->
+    </mat-accordion>
+  </div>
+</ng-container>

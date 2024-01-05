@@ -1,0 +1,22 @@
+<div *ngFor="let profile of studentProfile">
+  <div>
+    <h2>My Information</h2>
+    <p>
+      <b>Name: </b>{{ profile.firstName | uppercase }}
+      {{ profile.lastName | uppercase }}
+    </p>
+    <p>
+      <b>School Ownership Preference: </b
+      >{{ profile.privatePublic | uppercase }}
+    </p>
+    <p><b>Preferred US Region: </b>{{ profile.regionUsa | uppercase }}</p>
+    <p>
+      <b>Preferred Location Size: </b>{{ profile.locationSize | uppercase }}
+    </p>
+    <p><b>SAT Score: </b>{{ profile.satScore }}</p>
+    <p>
+      <b>Maximum Cost Of Attendance Preferred: </b
+      >{{ profile.maxCostOfAttendance | currency }}
+    </p>
+  </div>
+</div>

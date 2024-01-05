@@ -1,0 +1,25 @@
+.example-card {
+  max-width: 400px;
+}
+.example-header-image {
+  background-size: cover;
+}
+.content {
+  padding: 16px;
+  justify-content: space-evenly;
+}
+.elem-style {
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px -16px -16px 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.first-line {
+  padding-top: 20px;
+}
+.mat-card {
+  height: 100%;
+}

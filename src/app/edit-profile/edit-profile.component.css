@@ -1,0 +1,43 @@
+
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-container .mat-form-field {
+    width: 220px;
+  }
+  
+  .example-container form {
+    margin-bottom: 20px;
+  }
+  
+  .example-container form > * {
+    margin: 5px 0;
+  }
+  
+  
+  
+  .blue-button {
+    background-color: #00aeff;
+    padding: 5px 60px;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+  .blue-button:hover {
+    background-color: #89cdf4;
+    color: rgb(14, 14, 14);
+  }
+  
+  .my-card-content {
+    padding: 10px;
+  }
+  .my-card {
+    height: fit-content;
+    padding-top: 20px;
+    text-align: center;
+    
+  }
+  .center{
+    padding-bottom: 20px;
+  }
+  

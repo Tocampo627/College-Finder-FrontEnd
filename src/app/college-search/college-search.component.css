@@ -1,0 +1,63 @@
+.group {
+  width: 60%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.611);
+  padding: 15px;
+  margin-top: 12px;
+}
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.blue-button {
+  background-color: #00aeff;
+  padding: 2px 40px;
+  font-size: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+.blue-button:hover {
+  background-color: #89cdf4;
+  color: rgb(14, 14, 14);
+}
+
+.scroll {
+  height: 150px;
+  overflow-y: scroll;
+  background-color: #f5f5f5ee;
+  border-radius: 10px;
+}
+.button-1 {
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.button-2 {
+  text-align: center;
+  justify-content: center;
+}
+
+/* .example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+} */
+.content {
+  padding: 16px;
+  justify-content: space-evenly;
+}
+.elem-style {
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px -16px -16px 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.first-line {
+  padding-top: 20px;
+}
+.mat-card {
+  height: 100%;
+}
